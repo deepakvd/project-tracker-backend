@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="project-tracker-api/project-tracker-api.csproj" />
+  <Project Path="project-tracker-application/project-tracker-application.csproj" />
+  <Project Path="project-tracker-domain/project-tracker-domain.csproj" Id="d840422c-c2bd-45ca-9a0a-67f7de80d0f7" />
+  <Project Path="project-tracker-infrastructure/project-tracker-infrastructure.csproj" Id="8b1f33b5-6c8c-416f-ac8f-dca0a13ed746" />
+  <Project Path="project-tracker-services/project-tracker-services.csproj" Id="8d7a8080-132a-46f6-ad1b-dd7a0fa797c9" />
+</Solution>
