@@ -11,6 +11,9 @@
 *.sln.docstates
 *.env
 
+# Learning notes (personal References)
+learning-notes.md	
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
