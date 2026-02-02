@@ -5,7 +5,7 @@ Ship a functional, secure backend with the core user flows running in the cloud.
 
 ## Requirements + High-Level Design (HLD)
 - User stories for registration/login, projects, tasks, attachments
-- Role-based access (admin/manager/user)
+- Role-based access (admin/user)
 - ERD + system/component diagram
 - Initial OpenAPI/Swagger spec
 
@@ -37,7 +37,7 @@ Ship a functional, secure backend with the core user flows running in the cloud.
 
 ## Data Model + Migrations
 - Entities: User, Project, Task, Attachment, ProjectUser (junction table for project assignments)
-- Enums: UserRole (Admin, ProjectOwner, User), ProjectRole (ProjectAdmin, User), TaskStatus (ToDo, InProgress, Done)
+- Enums: UserRole (Admin, User), ProjectRole (ProjectOwner,ProjectAdmin, User), TaskStatus (New, InProgress, Done)
 - EF Core AppDbContext with proper relationships and indexes
 - Initial migrations
 - Seed test data (Admin user, sample ProjectOwner, projects, tasks)
@@ -69,7 +69,7 @@ Ship a functional, secure backend with the core user flows running in the cloud.
 - Dockerize backend with multi-stage build
 - Use environment variables for secrets (connection strings, JWT keys, storage credentials)
 - Managed cloud DB (Azure SQL Database)
-- Cloud storage for attachments (Azure Blob Storage)
+- Cloud storage for attachments (Azure Blob Storage) 
 - Deploy to Azure App Service / Azure Container Apps
 - CI/CD pipeline with GitHub Actions
 - Validate end-to-end workflow live (registration - project creation - task management - file upload)

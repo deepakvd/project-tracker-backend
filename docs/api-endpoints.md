@@ -171,7 +171,7 @@ their methods, parameters, and expected responses.
 		- title (string, required)
 		- description (string, optional)
 		- assignedUserId (int, optional)
-		- status (string, optional, default: ToDo) - one of: ToDo, InProgress, Done
+		- status (string, optional, default: New) - one of: New, Active, Closed
 		- dueDate (datetime, optional)
 	- Responses:
 		- 201 Created: Task successfully created with task details.
@@ -187,7 +187,7 @@ their methods, parameters, and expected responses.
 	- Query Parameters:
 		- page (int, optional, default: 1)
 		- pageSize (int, optional, default: 20, max: 100)
-		- status (string, optional) - Filter by: ToDo, InProgress, Done
+		- status (string, optional) - Filter by: ToDo, Active, Done
 		- assignedUserId (int, optional) - Filter by assigned user
 		- sortBy (string, optional, default: createdDate) - Sort by: createdDate, dueDate, title
 		- sortOrder (string, optional, default: desc) - asc or desc
@@ -197,15 +197,19 @@ their methods, parameters, and expected responses.
 		- 403 Forbidden: User does not have permission to view tasks in the project.
 		- 404 Not Found: Project does not exist.
 
-- GET /api/tasks/my-tasks
-	- Description: Retrieve all tasks assigned to the current user across all projects.
-	- Query Parameters:
-		- page (int, optional, default: 1)
-		- pageSize (int, optional, default: 20, max: 100)
-		- status (string, optional) - Filter by: ToDo, InProgress, Done
-	- Responses:
-		- 200 OK: Returns paginated list of user's tasks.
-		- 401 Unauthorized: User not authenticated.
+- GET /api/projects/{projectId}/tasks/my-tasks
+  - Description: Retrieve all tasks assigned to the current authenticated user within a specific project.
+  - Path Parameters:
+    - projectId (Guid, required) - The project to filter tasks from
+  - Query Parameters:
+    - page (int, optional, default: 1)
+    - pageSize (int, optional, default: 20, max: 100)
+    - status (string, optional) - Filter by: New, Active, Closed
+  - Responses:
+    - 200 OK: Returns paginated list of user's tasks in the project.
+    - 401 Unauthorized: User not authenticated (missing/invalid JWT token).
+    - 403 Forbidden: User does not have access to this project.
+    - 404 Not Found: Project does not exist.
 
 - GET /api/projects/{projectId}/tasks/{taskId}
 	- Description: Retrieve details of a specific task.
@@ -227,7 +231,7 @@ their methods, parameters, and expected responses.
 		- title (string, optional) - ProjectAdmin only
 		- description (string, optional) - ProjectAdmin only
 		- assignedUserId (int, optional) - ProjectAdmin only
-		- status (string, optional) - one of: ToDo, InProgress, Done
+		- status (string, optional) - one of: ToDo, Active, Done
 		- dueDate (datetime, optional) - ProjectAdmin only
 	- Responses:
 		- 200 OK: Task successfully updated.

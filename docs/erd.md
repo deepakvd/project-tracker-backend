@@ -5,8 +5,8 @@ Auditable
 - UpdatedBy
 
 UserRole - Enum - Admin, User
-ProjectRole - Enum - ProjectOwner, ProjectAdmin, User
-TaskStatus - Enum - New, InProgress, Done
+ProjectRole - Enum - ProjectOwner, ProjectAdmin, ProjectMember
+TaskStatus - Enum - New, Active, Closed
 
 User : Auditable
 - Id - long (PK)
@@ -33,13 +33,9 @@ Task : Auditable
 - Title - string
 - Description - string
 - Status - eTaskStatus
-- Assignee - long (FK to User)
-
-Comment : Auditable
-- Id - long (PK)
-- TaskId - long (FK to Task)
-- UserId - long (FK to User)
-- Content - string
+- AssigneeId - long (FK to User)
+- Assignee - User
+- DueDate - DateOnly?
 
 Attachment : Auditable
 - Id - long (PK)
@@ -55,14 +51,12 @@ Relationships:
 User 1 - ProjectUser M
 Project 1 - ProjectUser M
 Project 1 - Tasks M
-Tasks 1 - Comments M
 Tasks 1 - Attachments M
 
 Indexes:
 - User: Username (Unique), Email (Unique)
 - ProjectUser: UserId + ProjectId (Unique)
 - Tasks: ProjectId + Assignee (Index)
-- Comments: TaskId (Index)
 - Attachments: TaskId (Index)
 
 
