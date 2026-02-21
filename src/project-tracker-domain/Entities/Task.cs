@@ -18,7 +18,7 @@ namespace project_tracker_domain.Entities
 
         public TaskStatus Status { get; set; }
 
-        public Guid AssigneeUserId { get; set; } // Foreign key to User
+        public Guid AssignedUserId { get; set; } // Foreign key to User
 
         public User AssignedUser { get; set; } // Navigation property to User
 
