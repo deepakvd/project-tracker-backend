@@ -13,7 +13,7 @@ namespace project_tracker_domain.Entities
 
         public ICollection<ProjectUser> ProjectUsers { get; set; } = new List<ProjectUser>();
 
-        public ICollection<Task> Tasks { get; set; } = new List<Task>();
+        public ICollection<ProjectTask> Tasks { get; set; } = new List<ProjectTask>();
 
 
 

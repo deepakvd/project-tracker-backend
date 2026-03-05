@@ -2,12 +2,13 @@
 
 A learning project demonstrating Clean Architecture, complex RBAC, and cloud deployment with .NET 10.
 
-## Current Progress
-
-## Completed:
+## Completed - Current Progress:
 - ERD design in erd.md
 - API specifications in api-endpoints.md
 - Domain entities with auditable pattern
+- Docker Setup with PostgreSQL container
+- DBeaver to visualize the DB
+- Database Migration - In Progress
 
 ## Documentation
 

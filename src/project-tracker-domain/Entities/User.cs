@@ -15,7 +15,7 @@ namespace project_tracker_domain.Entities
 
         public UserRole Role { get; set; }
 
-        public ICollection<ProjectUser> Projects { get; set; } = new List<ProjectUser>(); // Navigation property to ProjectUser
+        public ICollection<ProjectUser> ProjectMemberships { get; set; } = new List<ProjectUser>(); // Navigation property to ProjectUser
 
 
 

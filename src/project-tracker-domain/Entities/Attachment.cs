@@ -8,7 +8,7 @@ namespace project_tracker_domain.Entities
     {
         public Guid TaskId { get; set; } // Foreign key to Task
 
-        public Task Task { get; set; } // Navigation property to Task
+        public ProjectTask Task { get; set; } // Navigation property to Task
 
         public string FileName { get; set; }
 

@@ -7,7 +7,7 @@ namespace project_tracker_domain.Entities
 {
     public abstract class BaseEntity : IAuditable
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; } = Guid.CreateVersion7();
 
         public DateTime CreatedAt { get; set; }
 
@@ -17,8 +17,10 @@ namespace project_tracker_domain.Entities
 
         public Guid UpdatedBy { get; set; }
 
+        public bool IsDeleted { get; set; }
 
+        public Guid? DeletedBy { get; set; }
 
-
+        public DateTime? DeletedAt { get; set; }
     }
 }
