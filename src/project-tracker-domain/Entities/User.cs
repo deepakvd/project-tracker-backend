@@ -17,8 +17,5 @@ namespace project_tracker_domain.Entities
 
         public ICollection<ProjectUser> ProjectMemberships { get; set; } = new List<ProjectUser>(); // Navigation property to ProjectUser
 
-
-
-
     }
 }

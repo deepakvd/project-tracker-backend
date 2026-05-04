@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\project-tracker-application\project-tracker-application.csproj" />
+    <ProjectReference Include="..\project-tracker-infrastructure\project-tracker-infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

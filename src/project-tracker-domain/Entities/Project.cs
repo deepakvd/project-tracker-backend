@@ -15,8 +15,6 @@ namespace project_tracker_domain.Entities
 
         public ICollection<ProjectTask> Tasks { get; set; } = new List<ProjectTask>();
 
-
-
     }
 
 }

@@ -14,6 +14,5 @@
 
         public bool IsUsed { get; set; }         // reuse detection
 
-        public string? ReplacedByToken { get; set; } // which token replaced this one
     }
 }

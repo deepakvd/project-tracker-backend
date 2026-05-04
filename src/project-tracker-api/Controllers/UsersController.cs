@@ -10,9 +10,6 @@ namespace project_tracker_api.Controllers
     {
         public UsersController() { }
 
-        public ActionResult<> Login(LoginRequest request)
-        {
-            // Implement login logic here
-            return Ok();
+        
     }
 }

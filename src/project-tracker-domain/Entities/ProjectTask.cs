@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using project_tracker_domain.Enums;
 
 namespace project_tracker_domain.Entities
 {
@@ -16,7 +17,7 @@ namespace project_tracker_domain.Entities
 
         public DateTime? DueDate { get; set; }
 
-        public TaskStatus Status { get; set; }
+        public Enums.TaskStatus Status { get; set; }
 
         public Guid? AssignedUserId { get; set; } // Foreign key to User
 
