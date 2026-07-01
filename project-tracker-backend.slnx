@@ -1,7 +1,6 @@
 <Solution>
   <Project Path="src/project-tracker-api/project-tracker-api.csproj" />
   <Project Path="src\project-tracker-application\project-tracker-application.csproj" />
-  <Project Path="src\project-tracker-services\project-tracker-services.csproj" />
   <Project Path="src\project-tracker-domain\project-tracker-domain.csproj" />
   <Project Path="src\project-tracker-infrastructure\project-tracker-infrastructure.csproj" />
 </Solution>

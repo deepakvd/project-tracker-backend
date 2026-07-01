@@ -13,7 +13,7 @@ namespace project_tracker_api.Controllers
             return Ok(new ApiResponse<T>(data: data, success: true, message: message));
         }
 
-        protected ActionResult<ApiResponse<T>> Failure<T>(string message, Dictionary<string, string[]>? errors = null)
+        protected ActionResult<ApiResponse<T>> Failure<T>(string message, Dictionary<string, string>? errors = null)
         {
             return BadRequest(new ApiResponse<T>(data: default, success: false, message: message, errors: errors));
         }

@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\project-tracker-application\project-tracker-application.csproj" />
     <ProjectReference Include="..\project-tracker-domain\project-tracker-domain.csproj" />
   </ItemGroup>
 
